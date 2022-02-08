@@ -1,0 +1,50 @@
+{%- if product and product != empty -%}
+    <div class="hs-item set-bg" data-setbg="{{ product.featured_media | img_url:'master' }}">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 text-white">
+                        <span>New Arrivals</span>
+                        <h2>{{ product.title }}</h2>
+                        <p>{{ product.description | truncate: 250 }} </p>
+                        <a href="{{ product.url }}" class="site-btn sb-line">DISCOVER</a>
+                        <a href="#" class="site-btn sb-white">ADD TO CART</a>
+                    </div>
+                </div>
+                <div class="offer-card text-white">
+                    <span>from</span>
+                    {% if product.price>99 %}
+                        <p style="font-size: 1.5rem;font-weight: 500;margin-top: 20px">{{ product.price | money }}</p>
+                    {%- else %}
+                        <h2>{{ product.price | money }}</h2>
+                    {% endif %}
+                    <a href="{{ product.url }}">SHOP NOW</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% else %}
+    {{ product }}
+    <div class="hs-item set-bg"
+         data-setbg="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7 text-white">
+                    <span>New Arrivals</span>
+                    <h2>denim jackets t</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra
+                        maecenas accumsan lacus vel facilisis. </p>
+                    <a href="#" class="site-btn sb-line">DISCOVER</a>
+                    <a href="#" class="site-btn sb-white">ADD TO CART</a>
+                </div>
+            </div>
+            <div class="offer-card text-white">
+                <span>from</span>
+                <h2>$29</h2>
+                <p>SHOP NOW</p>
+            </div>
+        </div>
+    </div>
+{% endif %}

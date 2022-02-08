@@ -1,0 +1,71 @@
+<section class="hero-section">
+ <div class="hero-slider owl-carousel">
+
+   {% render 'hero-product' with section.settings.product1 as product %}
+   {% render 'hero-product' with section.settings.product2 as product %}
+   {% render 'hero-product' with section.settings.product3 as product %}
+ </div>
+  <div class="container">
+    <div class="slide-num-holder" id="snh-1"></div>
+  </div>
+</section>
+<section class="features-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="{{ '1.png' | asset_img_url: 'master' }}" alt="#">
+          </div>
+          <h2>Fast Secure Payments</h2>
+        </div>
+      </div>
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="{{ '2.png' | asset_img_url: 'master'}}" alt="#">
+          </div>
+          <h2>Premium Products</h2>
+        </div>
+      </div>
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="{{ '3.png' | asset_img_url: 'master' }}" alt="#">
+          </div>
+          <h2>Free &amp; fast Delivery</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero-Section",
+  "limit": 1,
+  "settings": [
+    {
+      "type":"product",
+      "id": "product1",
+      "label": "Product 1"
+    },
+    {
+      "type":"product",
+      "id": "product2",
+      "label": "Product 2"
+    },
+    {
+      "type":"product",
+      "id": "product3",
+      "label": "Product 3"
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "Hero-Section"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,67 @@
+<section class="banner-section">
+    <div class="container">
+        <div class="banner set-bg" data-setbg="{{ section.settings.backgroundImage | img_url:'master' }}" style="background-image: url('{{ section.settings.backgroundImage | img_url:'master' }}');">
+            {% if section.settings.showLabel == true %}
+            <div class="tag-new">{{ section.settings.labelText }}</div>
+            {% endif %}
+            <span>{{ section.settings.title }}</span>
+            <h2>{{ section.settings.header }}</h2>
+            <a href="{{ section.settings.buttonUrl }}" class="site-btn">{{ section.settings.buttonText }}</a>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Home-Banner",
+        "settings": [
+            {
+                "type":"text",
+                "id": "title",
+                "label": "Title",
+                "default": "New Arrivals"
+            },
+            {
+                "type":"text",
+                "id": "header",
+                "label": "Header",
+                "default": "Striped shirt"
+            },
+            {
+                "type": "image_picker",
+                "id": "backgroundImage",
+                "label": "background image"
+            },
+            {
+                "type":"text",
+                "id": "buttonText",
+                "label": "Button Text",
+                "default": "Shop now"
+            },
+            {
+                "type":"url",
+                "id": "buttonUrl",
+                "label": "Button url",
+                "default": "/"
+            },
+            {
+                "type":"checkbox",
+                "id": "showLabel",
+                "label": "Show Label",
+                "default": true
+            },
+            {
+                "type":"text",
+                "id": "labelText",
+                "label": "Label Text",
+                "default": "New"
+            }
+            ],
+            "presets": [
+                {
+                     "name": "Home-Banner"
+                }
+        ]
+    }
+{% endschema %}

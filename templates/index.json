@@ -4,122 +4,29 @@
       "type": "hero-section"
     },
     "latest_collection": {
-      "type": "latest_collection",
+      "type": "latest-collection",
       "settings": {
         "title": "Latest products",
         "collection": "all",
         "products_to_show": 8
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "men"
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "copy-of-new-black-frock-1",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "woman"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "Check MY New Video",
-        "cover_image": "shopify:\/\/shop_images\/Narama-Sandun-Perera-Ft.-Kevin-Smokio-www.womic_.org_-1024x576.jpg",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=3eJc0xBgDoY&list=RDMM3eJc0xBgDoY&start_radio=1",
-        "description": "Video alt text",
-        "full_width": false,
-        "color_scheme": "background-2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/photo-1522057384400-681b421cfebc.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/photo-1483985988355-763728e1935b.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/photo-1517511176155-4d73cb85d49b.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+   "banner": {
+     "type": "home-banner"
+
+   },
+    "products": {
+      "type": "home-products"
+
     }
+
+
+
   },
   "order": [
     "hero_section",
     "latest_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "banner",
+    "products"
   ]
 }

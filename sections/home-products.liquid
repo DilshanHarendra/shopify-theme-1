@@ -1,0 +1,48 @@
+<section class="product-filter-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ section.settings.title }}</h2>
+        </div>
+        <ul class="product-filter-menu">
+            {% paginate collections by 12  %}
+
+            {% for collection in collections %}
+                <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+            {% endfor %}
+            {% endpaginate %}
+
+        </ul>
+        <div class="row">
+               {% paginate collections by 40  %}
+                {% for product in collections.all.products %}
+                    <div class="col-lg-3 col-sm-6 mb-5">
+                        {% render 'product-card' with product as product %}
+                    </div>
+                {% endfor %}
+               {% endpaginate %}
+
+        </div>
+
+    </div>
+</section>
+
+
+{% schema %}
+{
+"name": "Home-Banner",
+"settings": [
+{
+"type":"text",
+"id": "title",
+"label": "Title",
+"default": "browse top selling products"
+}
+
+],
+"presets": [
+{
+"name": "Home-Banner"
+}
+]
+}
+{% endschema %}
